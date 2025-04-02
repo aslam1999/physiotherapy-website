@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ascent Physiotherapy - Products &amp; Services</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo" />
+      </div>
+      <nav>
+        <a class="booknow" href="appointment.html">BOOK NOW</a>
+        <div class="hamburger" onclick="showNav()">
+          <span class="line">☰</span>
+        </div>
+      </nav>
+    </header>
+    <div id="navigation-mobile">
+      <a href="index.html">Home</a>
+      <a href="team.html">Our Team</a>
+      <a href="products.html">Products &amp; Services</a>
+      <a href="contactus.html">Contact Us</a>
+    </div>
+    <section class="navigation-desktop">
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="team.html">Our Team</a>
+        <a href="products.html">Products &amp; Services</a>
+        <a href="contactus.html">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="filter-search">
+      <h2>Products &amp; Services</h2>
+      <div class="controls">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search products or services..."
+        />
+        <select id="categoryFilter">
+          <option value="all">All</option>
+          <option value="therapy">Therapy Services</option>
+          <option value="equipment">Rehabilitation Equipment</option>
+          <option value="products">All Products</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" data-category="therapy">
+      <h2>Services</h2>
+      <ul id="servicesList">
+        <li>Physical Therapy</li>
+        <li>Manual and Manipulative Therapy</li>
+        <li>Intramuscular Stimulation (IMS)</li>
+        <li>Acupuncture</li>
+        <li>Radial Shockwave Therapy</li>
+        <li>Worksafe BC</li>
+        <li>ICBC</li>
+        <li>Treatment for TMJ Dysfunction</li>
+        <li>Myofascial Release and Craniosacral Therapy</li>
+        <li>Sports Therapy</li>
+        <li>Athletic Taping/ Bracing</li>
+      </ul>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" data-category="equipment products">
+      <h2>Products</h2>
+      <ul id="productsList">
+        <li data-category="equipment">Stability Balls</li>
+        <li data-category="equipment">Exercise Banding/Tubing</li>
+        <li data-category="products">Massage and Sports Creams</li>
+        <li data-category="products">Special Order items</li>
+        <li data-category="equipment">Foam Rollers</li>
+        <li data-category="equipment">TENS Machines</li>
+        <li data-category="equipment">Rock Tape</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© Kendra Mulligan Physical Therapist Corp 2010</p>
+    </footer>
+
+    <script>
+      function showNav() {
+        var element = document.getElementById("navigation-mobile");
+        element.classList.toggle("show-items");
+        element.style.width = "100%";
+      }
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
