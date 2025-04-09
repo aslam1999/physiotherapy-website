@@ -81,39 +81,7 @@ Save the appointment data in LocalStorage so if the user refreshes the page, the
 
 - Clean and compact design for team members.
 - Allows users to only read information they’re interested in, improving the browsing experience.
-  
-<br>
-<br>
-  
-**(Additional feature I would like to do if I got time)**
 
-## 4. Dynamic Google Maps Location with Appointment Booking Integration
-
-**Description:**
-
-- Enhance the Contact Us page (contactus.html) by embedding an interactive Google Maps API that shows the clinic’s exact location.
-- Add a “Book Appointment” button directly on the map marker that redirects users to the Appointment Booking Form (appointment.html).
-- If the user is using mobile devices, clicking the button can also open Google Maps Navigation for easier route guidance.
-
-**How it works:**
-
-- Use JavaScript to integrate Google Maps API.
-- Create a custom map marker with the clinic’s exact location.
-- Add an event listener that triggers a pop-up “Book Appointment” button when the user clicks the marker.
-- Provide navigation options if accessed on mobile.
-
-**Expected Outcome:**
-
-- Users can easily find the clinic and navigate to it.
-- It also creates a convenient booking flow by allowing users to book appointments straight from the map pop-up.
-
-
-**Expected Benefits of This Project:**
-
-- Improved user experience through real-time form validation and dynamic appointment confirmation.
-- Enhanced website navigation with searchable product listings and collapsible team member profiles.
-- Increased engagement and interactivity, making the website feel modern and professional.
-- Enhanced website navigation with searchable product listings and collapsible team member profiles.(If 4 is implemented)
 
 ## Technologies to Use:
 
