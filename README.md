@@ -81,7 +81,7 @@ Save the appointment data in LocalStorage so if the user refreshes the page, the
 
 - Clean and compact design for team members.
 - Allows users to only read information they’re interested in, improving the browsing experience.
-
+  
 
 ## Technologies to Use:
 
