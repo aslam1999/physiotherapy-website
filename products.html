@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex">
     <title>Ascent Physiotherapy - Products &amp; Services</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -50,43 +51,124 @@
         />
         <select id="categoryFilter">
           <option value="all">All</option>
-          <option value="therapy">Therapy Services</option>
+          <option value="therapy">Services</option>
           <option value="equipment">Rehabilitation Equipment</option>
-          <option value="products">All Products</option>
+          <option value="products">Products</option>
         </select>
+        <select id="sortFilter">
+          <option value="default">Default Order</option>
+          <option value="low-to-high">Lowest to Highest</option>
+          <option value="high-to-low">Highest to Lowest</option>
+        </select>
+        <div class="price-filter">
+          <label for="minPrice">Min Price:</label>
+          <input type="number" id="minPrice" placeholder="0" min="0" />
+          <label for="maxPrice">Max Price:</label>
+          <input type="number" id="maxPrice" placeholder="500" min="0" />
+        </div>
       </div>
     </section>
 
     <!-- Services Section -->
     <section class="services" data-category="therapy">
       <h2>Services</h2>
-      <ul id="servicesList">
-        <li>Physical Therapy</li>
-        <li>Manual and Manipulative Therapy</li>
-        <li>Intramuscular Stimulation (IMS)</li>
-        <li>Acupuncture</li>
-        <li>Radial Shockwave Therapy</li>
-        <li>Worksafe BC</li>
-        <li>ICBC</li>
-        <li>Treatment for TMJ Dysfunction</li>
-        <li>Myofascial Release and Craniosacral Therapy</li>
-        <li>Sports Therapy</li>
-        <li>Athletic Taping/ Bracing</li>
-      </ul>
+      <table id="servicesTable">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-price="100">
+            <td>Physical Therapy</td>
+            <td>$100</td>
+          </tr>
+          <tr data-price="120">
+            <td>Manual and Manipulative Therapy</td>
+            <td>$120</td>
+          </tr>
+          <tr data-price="110">
+            <td>Intramuscular Stimulation (IMS)</td>
+            <td>$110</td>
+          </tr>
+          <tr data-price="90">
+            <td>Acupuncture</td>
+            <td>$90</td>
+          </tr>
+          <tr data-price="130">
+            <td>Radial Shockwave Therapy</td>
+            <td>$130</td>
+          </tr>
+          <tr data-price="80">
+            <td>Worksafe BC</td>
+            <td>$80</td>
+          </tr>
+          <tr data-price="85">
+            <td>ICBC</td>
+            <td>$85</td>
+          </tr>
+          <tr data-price="115">
+            <td>Treatment for TMJ Dysfunction</td>
+            <td>$115</td>
+          </tr>
+          <tr data-price="105">
+            <td>Myofascial Release and Craniosacral Therapy</td>
+            <td>$105</td>
+          </tr>
+          <tr data-price="125">
+            <td>Sports Therapy</td>
+            <td>$125</td>
+          </tr>
+          <tr data-price="95">
+            <td>Athletic Taping/ Bracing</td>
+            <td>$95</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <!-- Products Section -->
     <section class="products" data-category="equipment products">
       <h2>Products</h2>
-      <ul id="productsList">
-        <li data-category="equipment">Stability Balls</li>
-        <li data-category="equipment">Exercise Banding/Tubing</li>
-        <li data-category="products">Massage and Sports Creams</li>
-        <li data-category="products">Special Order items</li>
-        <li data-category="equipment">Foam Rollers</li>
-        <li data-category="equipment">TENS Machines</li>
-        <li data-category="equipment">Rock Tape</li>
-      </ul>
+      <table id="productsTable">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-category="equipment" data-price="25">
+            <td>Stability Balls</td>
+            <td>$25</td>
+          </tr>
+          <tr data-category="equipment" data-price="15">
+            <td>Exercise Banding/Tubing</td>
+            <td>$15</td>
+          </tr>
+          <tr data-category="products" data-price="20">
+            <td>Massage and Sports Creams</td>
+            <td>$20</td>
+          </tr>
+          <tr data-category="products" data-price="50">
+            <td>Special Order Items</td>
+            <td>$50</td>
+          </tr>
+          <tr data-category="equipment" data-price="30">
+            <td>Foam Rollers</td>
+            <td>$30</td>
+          </tr>
+          <tr data-category="equipment" data-price="150">
+            <td>TENS Machines</td>
+            <td>$150</td>
+          </tr>
+          <tr data-category="equipment" data-price="10">
+            <td>Rock Tape</td>
+            <td>$10</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <footer>

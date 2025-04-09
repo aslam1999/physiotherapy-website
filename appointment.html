@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex">
     <title>Appointment Booking Form</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,9 +40,7 @@
         placeholder="Enter your email"
         required
       />
-      <div class="error" id="emailError">
-        Please enter a valid email address.
-      </div>
+      <div class="error" id="emailError">Please enter a valid email address.</div>
 
       <label for="phone">Phone Number:</label>
       <input
@@ -51,9 +50,35 @@
         placeholder="Enter your phone number"
         required
       />
-      <div class="error" id="phoneError">
-        Please enter a valid phone number.
-      </div>
+      <div class="error" id="phoneError">Please enter a valid phone number.</div>
+
+      <label for="sortService">Sort Items By:</label>
+      <select id="sortService" name="sortService">
+        <option value="default">Default Order</option>
+        <option value="low-to-high">Lowest to Highest Price</option>
+        <option value="high-to-low">Highest to Lowest Price</option>
+      </select>
+
+      <label for="serviceInput">Add Service/Product:</label>
+      <input
+        type="text"
+        id="serviceInput"
+        name="serviceInput"
+        placeholder="Type service, product, or price"
+      />
+      <div id="serviceDropdown" class="service-dropdown"></div>
+      <div class="selected-items" id="selectedItems"></div>
+      <div class="error" id="serviceError">Please add at least one service/product.</div>
+
+      <label for="servicePrice">Total Price:</label>
+      <input
+        type="text"
+        id="servicePrice"
+        name="servicePrice"
+        readonly
+        placeholder="Total will appear here"
+      />
+      <div class="error" id="servicePriceError">Total price not available.</div>
 
       <label for="date">Appointment Date:</label>
       <input type="date" id="date" name="date" required />
@@ -70,18 +95,18 @@
         placeholder="Add any additional information (optional)"
         rows="4"
       ></textarea>
-      <div class="error" id="messageError">This field has an error.</div>
 
       <button class="bookappointment" type="submit">Book Appointment</button>
     </form>
 
-    <!-- Modal popup for Confirmation -->
     <div id="confirmationModal" class="modal">
       <div class="modal-content">
         <h2>Confirm Your Appointment</h2>
         <p><strong>Name:</strong> <span id="modalName"></span></p>
         <p><strong>Email:</strong> <span id="modalEmail"></span></p>
         <p><strong>Phone:</strong> <span id="modalPhone"></span></p>
+        <p><strong>Services/Products:</strong> <span id="modalService"></span></p>
+        <p><strong>Total Price:</strong> <span id="modalPrice"></span></p>
         <p><strong>Date:</strong> <span id="modalDate"></span></p>
         <p><strong>Time:</strong> <span id="modalTime"></span></p>
         <p><strong>Notes:</strong> <span id="modalMessage"></span></p>
@@ -93,5 +118,6 @@
     </div>
 
     <script src="app.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92d0078bfaf36745',t:'MTc0NDA5NzExMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
   </body>
 </html>
